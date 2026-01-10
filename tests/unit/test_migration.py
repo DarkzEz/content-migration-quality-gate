@@ -90,7 +90,12 @@ def test_execute_continues_when_one_admin_migration_fails() -> None:
             return httpx.Response(422, json={"error": {"code": "content_validation_failed"}})
         return httpx.Response(
             200,
-            json={"draft_id": "draft-admissions", "slug": payload["slug"], "status": "published", "path": f"/v1/pages/{payload['slug']}"},
+            json={
+                "draft_id": "draft-admissions", 
+                "slug": payload["slug"], 
+                "status": "published", 
+                "path": f"/v1/pages/{payload['slug']}"
+            },
         )
 
     client = httpx.Client(transport=httpx.MockTransport(handler))
@@ -135,7 +140,12 @@ def test_execute_detects_admin_result_for_different_page() -> None:
     def handler(request: httpx.Request) -> httpx.Response:
         return httpx.Response(
             200,
-            json={"draft_id": "wrong-draft", "slug": "other-page", "status": "published", "path": "/v1/pages/other-page"},
+            json={
+                "draft_id": "wrong-draft", 
+                "slug": "other-page", 
+                "status": "published", 
+                "path": "/v1/pages/other-page"
+            },
         )
 
     client = httpx.Client(transport=httpx.MockTransport(handler))

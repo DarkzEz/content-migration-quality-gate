@@ -3,6 +3,7 @@
 from typing import Any
 
 import httpx
+
 from content_migration_gate.contracts import DraftResponse, PublishedPage, PublishedPageCreate
 from content_migration_gate.errors import (
     DependencyContractViolation,
@@ -42,7 +43,9 @@ class ServiceClient:
         if response.status_code >= 500:
             raise DependencyUnavailable("A downstream service returned a server error.")
         if response.status_code >= 400:
-            raise DependencyRejected(response.status_code, f"A downstream service returned HTTP {response.status_code}.")
+            raise DependencyRejected(
+                response.status_code, f"A downstream service returned HTTP {response.status_code}."
+            )
         return response
 
     @staticmethod

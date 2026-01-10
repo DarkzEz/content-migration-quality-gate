@@ -8,7 +8,12 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 from content_migration_gate.clients import CmsClient, SiteClient
-from content_migration_gate.contracts import DraftCreate, DraftResponse, PublishResult, PublishedPageCreate
+from content_migration_gate.contracts import (
+    DraftCreate,
+    DraftResponse,
+    PublishedPageCreate,
+    PublishResult,
+)
 from content_migration_gate.errors import (
     DependencyError,
     DraftNotFound,
