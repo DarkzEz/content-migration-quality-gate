@@ -1,0 +1,52 @@
+{
+  "export_format": "synthetic-tilda-export-v1",
+  "pages": [
+    {
+      "source_id": "page-about-center",
+      "slug": "about-the-center",
+      "title": "About the Center",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "A place to learn and build",
+          "style": { "family": "Arial", "size": 32, "color": "#17324D" }
+        },
+        {
+          "type": "text",
+          "text": "This synthetic page demonstrates migration of formatted text into a new content model.",
+          "style": { "family": "Arial", "size": 16, "color": "#303030" }
+        },
+        {
+          "type": "image",
+          "asset_url": "https://assets.example.test/center-building.jpg",
+          "alt_text": "Illustrative building photograph"
+        },
+        {
+          "type": "button",
+          "text": "Learn more",
+          "style": { "family": "Arial", "size": 14, "color": "#FFFFFF" }
+        }
+      ]
+    },
+    {
+      "source_id": "page-admissions",
+      "slug": "admissions-information",
+      "title": "Admissions Information",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Admissions information",
+          "style": { "family": "Georgia", "size": 28, "color": "#204060" }
+        },
+        {
+          "type": "text",
+          "text": "The new page is assembled from a small number of supported content blocks."
+        },
+        {
+          "type": "button",
+          "text": "Contact the team"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "export_format": "synthetic-tilda-export-v1",
+  "pages": [
+    {
+      "source_id": "page-restricted-example",
+      "slug": "restricted-content-example",
+      "title": "Example publication policy check",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "This internal-only paragraph is intentionally rejected by the demo policy."
+        }
+      ]
+    }
+  ]
+}
